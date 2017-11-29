@@ -1,20 +1,27 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { FaBars as Bars } from 'react-icons/lib/fa'
 import Menu from 'react-burger-menu/lib/menus/slide'
 
 
-const DesktopDiv = styled.div`
-  display: none;
+const DesktopDiv = styled.div` display: none;
   @media (min-width: 1000px) {
-    display: inline;
+    display: flex;
   }
 `
 
 const MobileDiv = styled.div`
   display: none;
   @media (max-width: 999px) {
-    display: inline;
+    display: flex;
+    justify-content: space-between;
   }
+`
+
+const RightCorner = styled.span`
+  position: absolute;
+  right: 12px;
+  top: 10px;
 `
 
 const ExpandedMenu = () => (
@@ -32,24 +39,31 @@ const ExpandedMenu = () => (
 )
 
 
-const SmallMenu = ({ toggleMenu, isMenuOpen }) => (
-  <MobileDiv>
-    {!isMenuOpen && <div onClick={toggleMenu}>BUTTON</div>}
-    <Menu
-      right
-      noOverlay
-      customBurgerIcon={false}
-      isOpen={isMenuOpen}
-      onStateChange={(state) => {
-        if (!state.isOpen) {
-          toggleMenu()
-        }
-      }}
-    >
-      <a>HDS</a>
-    </Menu>
-  </MobileDiv>
-)
+class SmallMenu extends Component {
+
+  render() {
+    const { toggleMenu, isMenuOpen } = this.props
+    return (
+      <MobileDiv>
+        <span style={{ marginLeft: 20 }}>LOGO</span>
+        {!isMenuOpen && <RightCorner onClick={toggleMenu}><Bars size={36}/></RightCorner>}
+        <Menu
+          right
+          customBurgerIcon={false}
+          isOpen={isMenuOpen}
+          onStateChange={(state) => {
+            if (!state.isOpen) {
+              toggleMenu()
+            }
+          }}
+        >
+          <a>HDS</a>
+        </Menu>
+      </MobileDiv>
+    )
+  }
+}
+
 
 class AppHeader extends Component {
   constructor(props) {
@@ -67,7 +81,7 @@ class AppHeader extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: 'lightgray', minHeight: 50 }}>
+      <div style={{ backgroundColor: 'lightgray', minHeight: 60 }}>
         <ExpandedMenu/>
         <SmallMenu
           toggleMenu={this.toggleMenu}
