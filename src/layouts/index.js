@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Footer, Header } from '../components'
+import './index.css'
 
 class DefaultLayout extends Component {
   render() {
