@@ -1,12 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
 import { FaHeart as Heart } from 'react-icons/lib/fa'
 
-const Footer = () => (
-  <footer style={{ background: "rgba(125, 125, 125, 0.1)", alignItems: "center", justifyContent: "center", display: "flex", width: "100%" }}>
+const Footer = styled.footer`
+  background: rgba(125, 125, 125, 0.1);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+`
+
+const AppFooter = () => (
+  <Footer>
     <small>Made with</small>
     <Heart style={{ color: 'red', margin: '0 8' }} size="12"/>
     <small>in LA</small>
-  </footer>
+  </Footer>
 )
 
-export default Footer
+export default AppFooter
