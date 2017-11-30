@@ -8,6 +8,8 @@ const Footer = styled.footer`
   justify-content: center;
   display: flex;
   width: 100%;
+  font-size: 14px;
+  box-shadow: 0px 1px 20px 2px #ccc;
 `
 
 const AppFooter = () => (

@@ -4,6 +4,8 @@ import { Tagline } from '../components'
 
 const Home = styled.div`
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   @media(max-width: 399px) {
     background: whitesmoke;
   }

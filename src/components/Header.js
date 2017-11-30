@@ -26,7 +26,7 @@ const RightCorner = styled.span`
 `
 
 
-const Logo = () => <img style={{ marginTop: 8, marginLeft: 12, height: 60, width: 60 }} src={logo}/>
+const Logo = () => <img style={{ marginTop: 8, marginBottom: 0, marginLeft: 12, height: 60, width: 60 }} src={logo}/>
 
 const Name = styled.h1`
   margin: 14px
@@ -83,7 +83,7 @@ class AppHeader extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: 'lightgray', height: 76 }}>
+      <div style={{ zIndex: 1, boxShadow: '0px 1px 20px 2px #ccc', backgroundColor: 'lightgray', height: 76 }}>
         <ExpandedMenu/>
         <SmallMenu
           toggleMenu={this.toggleMenu}

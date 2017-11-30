@@ -1,5 +1,4 @@
 import React from 'react'
-import FitText from 'react-fittext'
 import styled, { keyframes } from 'styled-components'
 
 const Blink = keyframes`
@@ -25,12 +24,10 @@ const BlinkingSpan = styled.span`
 `
 
 const Tagline = () => (
-  <div style={{ display: 'flex', marginLeft: 12 }}>
-    <FitText maxFontSize={100}>
-      <h1 style={{wordSpacing: '0.2em'}}>
+  <div style={{ display: 'flex', marginLeft: 12, alignSelf: 'center' }}>
+      <h1 style={{wordSpacing: '0.2em', fontSize: 60}}>
         I build dope software&nbsp;<BlinkingSpan>_</BlinkingSpan>
       </h1>
-    </FitText>
   </div>
 )
 
