@@ -1,7 +1,7 @@
 {
   "name": "jsjaspreet.com",
   "description": "Personal Website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jaspreet Singh <jaspreet_xps@yahoo.com>",
   "dependencies": {
     "gatsby": "^1.9.119",

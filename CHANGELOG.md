@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.1.0...v0.2.0) (2017-11-30)
+
+
+### Features
+
+* **styling:** Fix up footer/header styling, remove fittext ([8a8d330](https://github.com/jsjaspreet/jsjaspreet.com/commit/8a8d330))
+* **tagline:** Add responsive tagline ([400a20a](https://github.com/jsjaspreet/jsjaspreet.com/commit/400a20a))
+
+
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.0.1...v0.1.0) (2017-11-30)
 
