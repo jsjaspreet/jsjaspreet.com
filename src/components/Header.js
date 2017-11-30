@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { FaBars as Bars } from 'react-icons/lib/fa'
+import logo from './logo.png'
 import Menu from 'react-burger-menu/lib/menus/slide'
 
 
 const DesktopDiv = styled.div` display: none;
-  @media (min-width: 1000px) {
+  @media (min-width: 500px) {
     display: flex;
   }
 `
 
 const MobileDiv = styled.div`
   display: none;
-  @media (max-width: 999px) {
+  @media (max-width: 499px) {
     display: flex;
     justify-content: space-between;
   }
@@ -21,20 +22,20 @@ const MobileDiv = styled.div`
 const RightCorner = styled.span`
   position: absolute;
   right: 12px;
-  top: 10px;
+  top: 18px;
+`
+
+
+const Logo = () => <img style={{ marginTop: 8, marginLeft: 12, height: 60, width: 60 }} src={logo}/>
+
+const Name = styled.h1`
+  margin: 14px
 `
 
 const ExpandedMenu = () => (
   <DesktopDiv>
-    <div>
-      Honey
-    </div>
-    <div>
-      Dummy
-    </div>
-    <div>
-      Store
-    </div>
+    <Logo/>
+    <Name>jaspreet</Name>
   </DesktopDiv>
 )
 
@@ -45,7 +46,7 @@ class SmallMenu extends Component {
     const { toggleMenu, isMenuOpen } = this.props
     return (
       <MobileDiv>
-        <span style={{ marginLeft: 20 }}>LOGO</span>
+        <Logo/>
         {!isMenuOpen && <RightCorner onClick={toggleMenu}><Bars size={36}/></RightCorner>}
         <Menu
           right
@@ -57,7 +58,8 @@ class SmallMenu extends Component {
             }
           }}
         >
-          <a>HDS</a>
+          <h2>Blog</h2>
+          <h2>About</h2>
         </Menu>
       </MobileDiv>
     )
@@ -81,7 +83,7 @@ class AppHeader extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: 'lightgray', minHeight: 60 }}>
+      <div style={{ backgroundColor: 'lightgray', height: 76 }}>
         <ExpandedMenu/>
         <SmallMenu
           toggleMenu={this.toggleMenu}

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { Tagline } from '../components'
 
 const Home = styled.div`
   flex-grow: 1;
@@ -14,12 +14,9 @@ const Home = styled.div`
 `
 
 
-
 const IndexPage = () => (
   <Home>
-    <h1>Honey Dummy Store</h1>
-    <p>Welcome to the static honey dummy store.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Tagline/>
   </Home>
 )
 
