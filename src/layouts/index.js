@@ -10,9 +10,7 @@ class DefaultLayout extends Component {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
         <Header/>
-        <div style={{ flexGrow: 1 }}>
-          {children()}
-        </div>
+        {children()}
         <ScrollUp showUnder={160}>
           <UpArrow size={40}/>
         </ScrollUp>
