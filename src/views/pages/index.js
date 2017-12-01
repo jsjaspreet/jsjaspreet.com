@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Tagline } from '../components'
+import { Tagline } from '../../components/index'
 
 const Home = styled.div`
   flex-grow: 1;

@@ -3,12 +3,16 @@
   "description": "Personal Website",
   "version": "0.2.0",
   "author": "Jaspreet Singh <jaspreet_xps@yahoo.com>",
+  "keywords": [
+    "jsjaspreet"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "release": "standard-version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "gatsby": "^1.9.119",
-    "gatsby-link": "^1.6.28",
-    "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-styled-components": "^2.0.3",
-    "gatsby-plugin-typography": "^1.7.10",
     "lodash": "^4.17.4",
     "react-burger-menu": "^2.1.11",
     "react-icons": "^2.2.7",
@@ -17,20 +21,5 @@
     "styled-components": "^2.2.3",
     "typography": "^0.16.6",
     "typography-theme-ocean-beach": "^0.15.11"
-  },
-  "keywords": [
-    "jsjaspreet"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "release": "standard-version",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.8.2"
   }
 }

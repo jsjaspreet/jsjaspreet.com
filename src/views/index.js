@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Footer, Header } from '../components'
-import './index.css'
+import { Footer, Header } from '../components/index'
 import { FaArrowCircleOUp as UpArrow } from 'react-icons/lib/fa'
 import ScrollUp from 'react-scroll-up'
 

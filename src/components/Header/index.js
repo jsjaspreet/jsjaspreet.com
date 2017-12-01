@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { FaBars as Bars } from 'react-icons/lib/fa'
-import logo from './logo.png'
+import logo from '../../assets/logo.png'
 import Menu from 'react-burger-menu/lib/menus/slide'
 
 
