@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
-import { Footer, Header } from '../components/index'
-import { FaArrowCircleOUp as UpArrow } from 'react-icons/lib/fa'
 import ScrollUp from 'react-scroll-up'
+import { FaArrowCircleOUp as UpArrow } from 'react-icons/lib/fa'
+import { Switch, Route } from 'react-router-dom'
+import {
+  Home,
+} from './routes'
 
-class DefaultLayout extends Component {
+class App extends Component {
   render() {
-    const { children } = this.props
     return (
       <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        <Header/>
-        {children()}
         <ScrollUp showUnder={160}>
           <UpArrow size={40}/>
         </ScrollUp>
-        <Footer/>
+        <Switch>
+          <Route path="/" exact component={Home}/>
+        </Switch>
       </div>
     )
   }
 }
 
-export default DefaultLayout
+export default App

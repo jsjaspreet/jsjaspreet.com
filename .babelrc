@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-1"
+  ],
+  "plugins": [
+    "babel-plugin-inline-import",
+    "transform-object-rest-spread",
+    "react-hot-loader/babel"
+  ]
+}
