@@ -22,13 +22,21 @@ const Blink = keyframes`
 const BlinkingSpan = styled.span`
  animation: ${Blink} 1s infinite;
 `
+const AlignedH1 = styled.h1`
+  word-spacing: 0.2em;
+  font-size: 60px;
+  background: black;
+  font-family: 'Roboto Mono', monospace;
+  color: lawngreen;
+  padding: 10px;
+  margin-bottom: 22px;
+  align-self: center;
+`
 
 const Tagline = () => (
-  <div style={{ display: 'flex', marginLeft: 12, alignSelf: 'center' }}>
-      <h1 style={{wordSpacing: '0.2em', fontSize: 60}}>
-        I build dope software&nbsp;<BlinkingSpan>_</BlinkingSpan>
-      </h1>
-  </div>
+  <AlignedH1>
+    I build dope software&nbsp;<BlinkingSpan>_</BlinkingSpan>
+  </AlignedH1>
 )
 
 export default Tagline
