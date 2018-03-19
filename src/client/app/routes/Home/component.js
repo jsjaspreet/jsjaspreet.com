@@ -6,7 +6,6 @@ import { HomeBlock } from '../../components'
 // background: url(${polaroid});
 const HomeLayout = styled.div`
   width: 100%;
-  max-width: 1666px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
