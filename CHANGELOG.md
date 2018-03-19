@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.2.0...v0.3.0) (2018-03-19)
+
+
+### Features
+
+* **homepage:** Some homepage work ([c555fae](https://github.com/jsjaspreet/jsjaspreet.com/commit/c555fae))
+* **remove-gatsby:** Remove gatsby ([0289798](https://github.com/jsjaspreet/jsjaspreet.com/commit/0289798))
+* **update:** Update with loadable, update deploy s script ([925ceb1](https://github.com/jsjaspreet/jsjaspreet.com/commit/925ceb1))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.1.0...v0.2.0) (2017-11-30)
 
