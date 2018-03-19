@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { HomeBlock } from '../../components'
 
-// background: #f2f2f2;
-// background: url(${polaroid});
 const HomeLayout = styled.div`
   width: 100%;
   flex-grow: 1;
