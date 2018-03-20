@@ -14,8 +14,8 @@ import {
 const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 `
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
       <MainDiv>
         <Header/>
         <ScrollUp showUnder={160}>
-          <UpArrow size={40}/>
+          <UpArrow style={{ color: 'aliceblue' }} size={40}/>
         </ScrollUp>
         <Switch>
           <Route path="/" exact component={Home}/>

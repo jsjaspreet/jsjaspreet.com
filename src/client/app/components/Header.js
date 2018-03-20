@@ -6,7 +6,7 @@ import logo from '../assets/logo.png'
 const CenteringHeader = styled.header`
   display: flex;
   align-items: center;
-  height: 54px;
+  min-height: 55px;
   justify-content: center;
   width: 100%;
   background: rgba(125, 125, 125, 0.1);
@@ -43,7 +43,6 @@ class Header extends PureComponent {
           </Link>
           <RightNav>
             <Link style={linkStyle} to="/blog">Blog</Link>
-            <Link style={linkStyle} to="/about">About</Link>
             <Link style={linkStyle} to="/contact">Contact</Link>
           </RightNav>
         </HeaderContent>

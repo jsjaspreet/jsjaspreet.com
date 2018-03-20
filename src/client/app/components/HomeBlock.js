@@ -5,7 +5,7 @@ import background from '../assets/background.jpg'
 
 const Home = styled.div`
   margin-top: 10px;
-  height: 450px;
+  min-height: 450px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
