@@ -1,4 +1,5 @@
 export Footer from './Footer'
+export Header from './Header'
 export Tagline from './Tagline'
 export Loading from './Loading'
 export HomeBlock from './HomeBlock'

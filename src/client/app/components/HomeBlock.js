@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import Tagline from './Tagline'
 import background from '../assets/background.jpg'
 
 const Home = styled.div`
+  margin-top: 10px;
   height: 450px;
   display: flex;
   justify-content: flex-end;
@@ -16,13 +17,14 @@ const Home = styled.div`
   }
 `
 
-
-const IndexPage = () => {
-  return (
-    <Home>
-      <Tagline/>
-    </Home>
-  )
+class HomeBlock extends PureComponent {
+  render() {
+    return (
+      <Home>
+        <Tagline/>
+      </Home>
+    )
+  }
 }
 
-export default IndexPage
+export default HomeBlock

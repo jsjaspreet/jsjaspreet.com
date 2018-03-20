@@ -4,7 +4,8 @@ import ScrollUp from 'react-scroll-up'
 import { FaArrowCircleOUp as UpArrow } from 'react-icons/lib/fa'
 import { Switch, Route } from 'react-router-dom'
 import {
-  Footer
+  Footer,
+  Header,
 } from './components'
 import {
   Home,
@@ -21,6 +22,7 @@ class App extends Component {
   render() {
     return (
       <MainDiv>
+        <Header/>
         <ScrollUp showUnder={160}>
           <UpArrow size={40}/>
         </ScrollUp>
