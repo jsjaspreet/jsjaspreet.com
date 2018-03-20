@@ -1,7 +1,7 @@
 const { readdirSync, renameSync } = require('fs')
 const DIST = './dist'
 
-const distFiles = readdirSync(DIST).filter(file => !file.endsWith("jpg"))
+const distFiles = readdirSync(DIST).filter(file => !file.endsWith("jpg") && !file.endsWith("png"))
 
 for (const distFile of distFiles) {
   const newFileName = distFile.split("").slice(0, -3).join("")
