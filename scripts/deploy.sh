@@ -10,6 +10,7 @@ mkdir images
 # png
 mkdir images/png
 mv dist/*.png images/png
+optipng -o7 images/png/*
 
 # jpg
 mkdir images/jpg
