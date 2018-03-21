@@ -3,6 +3,9 @@ const common = require('./webpack.common');
 const projectPaths = require('../projectPaths');
 
 module.exports = merge(common, {
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   output: {
     filename: '[name].js',
     chunkFilename: '[name].js',

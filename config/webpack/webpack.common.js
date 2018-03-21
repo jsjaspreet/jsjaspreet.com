@@ -30,7 +30,6 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin(),
     new WebpackChunkHash(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
     }),
