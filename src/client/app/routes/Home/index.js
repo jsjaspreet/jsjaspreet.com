@@ -1,16 +1,30 @@
-import React, { Component } from 'react'
-import Loadable from 'react-loadable'
-import { Loading } from '../../components'
+import React, { PureComponent } from 'react'
+import styled from 'styled-components'
+import {
+  HomeBlock,
+  ContactBlock,
+  BlogBlock,
+} from '../../components'
 
-const LoadableComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "home" */ './component'),
-  loading: Loading,
-})
+const HomeLayout = styled.div`
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: dodgerblue;
+`
 
-class Route extends Component {
+class IndexPage extends PureComponent {
   render() {
-    return <LoadableComponent {...this.props} />
+    return (
+      <HomeLayout>
+        <HomeBlock/>
+        <BlogBlock/>
+        <ContactBlock/>
+      </HomeLayout>
+    )
   }
 }
 
-export default Route
+export default IndexPage
