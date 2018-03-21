@@ -26,7 +26,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist'], { root: projectPaths.rootDir }),
     new HtmlWebpackPlugin({
       template: path.join(projectPaths.viewsDir, 'index.html'),
-      favicon: './favicon.png',
+      favicon: './favicon.ico',
       inject: true,
     }),
     new webpack.NamedModulesPlugin(),
