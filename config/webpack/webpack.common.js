@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const WebpackChunkHash = require('webpack-chunk-hash')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path')
@@ -8,7 +9,8 @@ module.exports = {
   entry: {
     bundle: [
       'react-hot-loader/patch',
-      projectPaths.clientEntry
+      'babel-polyfill',
+      projectPaths.clientEntry,
     ],
     vendor: [
       'react',
@@ -19,19 +21,15 @@ module.exports = {
       'react-router-dom',
     ]
   },
-  output: {
-    filename: '[name].[hash].[id].js',
-    chunkFilename: '[name].[hash].[id].js',
-    path: projectPaths.distDir
-  },
+
   plugins: [
     new CleanWebpackPlugin(['dist'], { root: projectPaths.rootDir }),
     new HtmlWebpackPlugin({
       template: path.join(projectPaths.viewsDir, 'index.html'),
-      hash: true,
       inject: true,
     }),
     new webpack.NamedModulesPlugin(),
+    new WebpackChunkHash(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']

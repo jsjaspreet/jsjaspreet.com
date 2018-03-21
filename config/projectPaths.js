@@ -11,6 +11,7 @@ const assetDir = path.join(distDir, 'assets')
 // build inputs
 const webpackDir = path.join(configDir, 'webpack')
 const clientEntry = path.join(clientDir, 'index.js')
+const dbEntry = path.join(clientDir, 'app', 'database', 'dao.js')
 
 
 module.exports = {
@@ -24,4 +25,5 @@ module.exports = {
 
   // entry points
   clientEntry,
+  dbEntry,
 }
