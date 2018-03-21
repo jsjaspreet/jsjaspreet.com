@@ -20,6 +20,7 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       template: path.join(projectPaths.viewsDir, 'index.html'),
       filename: path.join(projectPaths.distDir, 'index.html'),
+      favicon: './favicon.png',
       inject: true,
     }),
     new UglifyJSPlugin({
