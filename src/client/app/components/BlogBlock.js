@@ -15,7 +15,7 @@ const Block = styled.div`
 `
 
 const BlogText = styled.h1`
-  font-size: 120px;
+  font-size: 90px;
   color: crimson;
   font-family: 'Monoton', cursive;
 `

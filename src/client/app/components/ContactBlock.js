@@ -16,7 +16,7 @@ const Block = styled.div`
 `
 
 const BlockText = styled.h1`
-  font-size: 100px;
+  font-size: 70px;
   color: lightskyblue;
   font-family: 'Bungee Inline', cursive;
 `

@@ -9,12 +9,7 @@ const Home = styled.div`
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  @media(max-width: 399px) {
-    background: whitesmoke;
-  }
-  @media(min-width: 400px) {
-    background: url(${background}) no-repeat center;
-  }
+  background: url(${background}) no-repeat center;
 `
 
 class HomeBlock extends PureComponent {
