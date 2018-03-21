@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.4.2...v0.5.0) (2018-03-21)
+
+
+### Features
+
+* **db:** Create separate db, allow for asynchronous loading of the db chunk ([a524a8a](https://github.com/jsjaspreet/jsjaspreet.com/commit/a524a8a))
+* **mobile:** Mobile tweaking ([1b57d41](https://github.com/jsjaspreet/jsjaspreet.com/commit/1b57d41))
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.4.1...v0.4.2) (2018-03-20)
 
