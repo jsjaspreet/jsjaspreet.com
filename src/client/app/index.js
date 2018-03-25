@@ -9,6 +9,7 @@ import {
 } from './components';
 import {
   Home,
+  Contact,
   Blog,
 } from './routes';
 
@@ -30,6 +31,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/blog" exact component={Blog}/>
+          <Route path="/contact" exact component={Contact}/>
         </Switch>
         <Footer/>
       </MainDiv>
