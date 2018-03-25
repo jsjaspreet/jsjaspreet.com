@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.6.0...v0.7.0) (2018-03-25)
+
+
+### Bug Fixes
+
+* **favicon:** Another favicon fix.. ([5b5e122](https://github.com/jsjaspreet/jsjaspreet.com/commit/5b5e122))
+* **favicon:** Fix favicon issue ([8a108f7](https://github.com/jsjaspreet/jsjaspreet.com/commit/8a108f7))
+
+
+### Features
+
+* **contact:** Add contact page ([bbfa4af](https://github.com/jsjaspreet/jsjaspreet.com/commit/bbfa4af))
+
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.5.3...v0.6.0) (2018-03-21)
 
