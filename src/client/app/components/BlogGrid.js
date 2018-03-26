@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
-import { CSSGrid, makeResponsive, layout } from 'react-stonecutter';
+import { CSSGrid, makeResponsive, measureItems, layout } from 'react-stonecutter';
 
-const Grid = makeResponsive(CSSGrid, { maxWidth: 992 });
+const Grid = makeResponsive(measureItems(CSSGrid), { maxWidth: 992 });
 
 class BlogGrid extends PureComponent {
   render() {
     return (
       <Grid
-        columnWidth={300}
+        columnWidth={200}
         layout={layout.pinterest}
         gutterWidth={10}
         duration={500}
