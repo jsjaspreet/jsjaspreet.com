@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.0"></a>
+# [0.10.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.9.0...v0.10.0) (2018-03-26)
+
+
+### Features
+
+* **blog:** Add beginnings of blog grid ([491c2a5](https://github.com/jsjaspreet/jsjaspreet.com/commit/491c2a5))
+* **blog:** Add BlogCard, update db schema ([057a31f](https://github.com/jsjaspreet/jsjaspreet.com/commit/057a31f))
+
+
+
 <a name="0.9.0"></a>
 # [0.9.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.8.0...v0.9.0) (2018-03-26)
 
