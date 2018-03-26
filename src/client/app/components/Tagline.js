@@ -25,6 +25,7 @@ const BlinkingSpan = styled.span`
 const AlignedH1 = styled.h1`
   word-spacing: 0.2em;
   font-size: 60px;
+  cursor: crosshair;
   background: black;
   font-family: 'Roboto Mono', monospace;
   color: lawngreen;
