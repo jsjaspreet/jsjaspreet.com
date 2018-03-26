@@ -1,7 +1,8 @@
-import React, { PureComponent } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import logo from '../assets/logo.png'
+import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import logo from '../assets/logo.png';
+
 
 const CenteringHeader = styled.header`
   display: flex;
@@ -10,19 +11,19 @@ const CenteringHeader = styled.header`
   justify-content: center;
   width: 100%;
   background: lightsteelblue;
-`
+`;
 
 const HeaderContent = styled.div`
   max-width: 992px;
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const RightNav = styled.nav`
   display: flex;
   align-self: center;
-`
+`;
 
 const linkStyle = {
   marginLeft: 10,
@@ -31,7 +32,7 @@ const linkStyle = {
   marginRight: 10,
   cursor: 'pointer',
   fontFamily: '\'Open Sans\', sans-serif',
-}
+};
 
 class Header extends PureComponent {
   render() {
@@ -47,8 +48,8 @@ class Header extends PureComponent {
           </RightNav>
         </HeaderContent>
       </CenteringHeader>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;
