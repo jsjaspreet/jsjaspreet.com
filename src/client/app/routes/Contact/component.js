@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { ContactLinks } from '../../components';
 
@@ -16,9 +17,14 @@ const ContactLayout = styled.div`
 class ContactPage extends PureComponent {
   render() {
     return (
-      <ContactLayout>
-        <ContactLinks/>
-      </ContactLayout>
+      <Fragment>
+        <Helmet>
+          <title>JS - Contact</title>
+        </Helmet>
+        <ContactLayout>
+          <ContactLinks/>
+        </ContactLayout>
+      </Fragment>
     );
   }
 }

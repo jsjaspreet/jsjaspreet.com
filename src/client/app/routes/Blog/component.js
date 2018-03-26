@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 const BlogLayout = styled.div`
@@ -22,11 +23,15 @@ class BlogPage extends PureComponent {
   }
 
   render() {
-    console.log(this.state)
     return (
-      <BlogLayout>
-        Blog
-      </BlogLayout>
+      <Fragment>
+        <Helmet>
+          <title>JS - Blog</title>
+        </Helmet>
+        <BlogLayout>
+          Blog
+        </BlogLayout>
+      </Fragment>
     );
   }
 }

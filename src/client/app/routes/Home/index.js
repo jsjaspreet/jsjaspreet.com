@@ -1,10 +1,11 @@
-import React, { PureComponent } from 'react'
-import styled from 'styled-components'
+import React, { PureComponent, Fragment } from 'react';
+import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import {
   HomeBlock,
   ContactBlock,
   BlogBlock,
-} from '../../components'
+} from '../../components';
 
 const HomeLayout = styled.div`
   width: 100%;
@@ -13,18 +14,23 @@ const HomeLayout = styled.div`
   flex-direction: column;
   align-items: center;
   background: dodgerblue;
-`
+`;
 
 class IndexPage extends PureComponent {
   render() {
     return (
-      <HomeLayout>
-        <HomeBlock/>
-        <BlogBlock/>
-        <ContactBlock/>
-      </HomeLayout>
-    )
+      <Fragment>
+        <Helmet>
+          <title>jsjaspreet</title>
+        </Helmet>
+        <HomeLayout>
+          <HomeBlock/>
+          <BlogBlock/>
+          <ContactBlock/>
+        </HomeLayout>
+      </Fragment>
+    );
   }
 }
 
-export default IndexPage
+export default IndexPage;

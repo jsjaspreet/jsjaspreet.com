@@ -16,6 +16,7 @@ module.exports = {
       'react',
       'react-dom',
       'react-loadable',
+      'react-helmet',
       'react-fontawesome',
       'react-hot-loader',
       'react-router-dom',
