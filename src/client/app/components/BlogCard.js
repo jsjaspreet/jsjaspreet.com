@@ -13,7 +13,7 @@ const Preview = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 20px;
   margin-bottom: 6px;
 `;
