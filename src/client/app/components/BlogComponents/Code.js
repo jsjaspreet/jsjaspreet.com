@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { findDOMNode } from 'react-dom';
 import styled from 'styled-components';
 
 const StyledCode = styled.code`
@@ -11,6 +12,15 @@ const StyledCode = styled.code`
 `;
 
 class Code extends PureComponent {
+  componentDidMount() {
+    hljs.highlightBlock(findDOMNode(this.refs.code));
+  }
+
+  componentDidUpdate() {
+    highlight.initHighlighting.called = false;
+    highlight.highlightBlock(findDOMNode(this.refs.code));
+  }
+
   render() {
     const {
       code = `
@@ -34,7 +44,7 @@ typography.injectStyles()
     } = this.props;
     return (
       <pre>
-        <StyledCode className={`hljs ${language}`}>
+        <StyledCode ref='code' className={`hljs ${language}`}>
           {`${code}`.replace(/^\s+|\s+$/g, '')}
         </StyledCode>
         </pre>

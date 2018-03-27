@@ -11,8 +11,11 @@ const BlogLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
   background: dodgerblue;
+`;
+
+const TopPad = styled.div`
+  padding-top: 20px;
 `;
 
 class BlogPage extends Component {
@@ -44,13 +47,15 @@ class BlogPage extends Component {
 
     const currentPage = db.getPage(currentPageNumber);
     const EntryGrid = (
-      <BlogGrid>
-        {currentPage.map((preview, idx) => (
-          <div key={idx}>
-            <BlogCard {...preview} />
-          </div>
-        ))}
-      </BlogGrid>
+      <TopPad>
+        <BlogGrid>
+          {currentPage.map((preview, idx) => (
+            <div key={idx}>
+              <BlogCard {...preview} />
+            </div>
+          ))}
+        </BlogGrid>
+      </TopPad>
     );
     return (
       <Fragment>
