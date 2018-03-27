@@ -1,8 +1,9 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { Loading, BlogGrid, BlogCard } from '../../components';
+import Entries from './Entries';
 
 const BlogLayout = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ const BlogLayout = styled.div`
   background: dodgerblue;
 `;
 
-class BlogPage extends PureComponent {
+class BlogPage extends Component {
   constructor(props) {
     super(props);
     this.state = { db: null, currentPageNumber: 0 };
@@ -58,6 +59,7 @@ class BlogPage extends PureComponent {
         </Helmet>
         <BlogLayout>
           {match.isExact && EntryGrid}
+          <Entries/>
         </BlogLayout>
       </Fragment>
     );

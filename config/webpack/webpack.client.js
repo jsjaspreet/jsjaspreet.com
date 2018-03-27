@@ -8,6 +8,7 @@ module.exports = merge(common, {
     new webpack.HotModuleReplacementPlugin(),
   ],
   output: {
+    publicPath: '/',
     filename: '[name].js',
     chunkFilename: '[name].js',
     path: projectPaths.distDir

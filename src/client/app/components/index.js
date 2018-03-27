@@ -8,3 +8,4 @@ export ContactBlock from './ContactBlock';
 export ContactLinks from './ContactLinks';
 export BlogGrid from './BlogGrid';
 export BlogCard from './BlogCard';
+export * from './BlogComponents';

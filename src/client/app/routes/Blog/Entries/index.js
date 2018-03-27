@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Loadable from 'react-loadable'
-import { Loading } from '../../../../components/index'
+import { Loading } from '../../../components'
 
 const LoadableComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "lessons-first-job" */ './component'),
+  loader: () => import(/* webpackChunkName: "entries" */ './component'),
   loading: Loading,
 })
 
