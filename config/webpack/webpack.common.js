@@ -20,6 +20,7 @@ module.exports = {
       'react-fontawesome',
       'react-hot-loader',
       'react-router-dom',
+      'slug',
     ]
   },
 

@@ -11,6 +11,7 @@ import {
   Home,
   Contact,
   Blog,
+  BlogEntry,
 } from './routes';
 
 const MainDiv = styled.div`
@@ -30,7 +31,7 @@ class App extends Component {
         </ScrollUp>
         <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path="/blog" exact component={Blog}/>
+          <Route path="/blog" component={Blog}/>
           <Route path="/contact" exact component={Contact}/>
         </Switch>
         <Footer/>

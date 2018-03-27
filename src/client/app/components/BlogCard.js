@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import slug from 'slug';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Tag from './BlogTag';
 
@@ -38,16 +40,18 @@ class BlogCard extends PureComponent {
   render() {
     const { title, tags = [], date } = this.props;
     return (
-      <Preview>
-        <Title>{title}</Title>
-        <Date>{date}</Date>
-        <Tags>
-          {
-            tags.map((tag, idx) => <Tag key={idx} type={tag}/>)
-          }
-        </Tags>
-        <Read>read</Read>
-      </Preview>
+      <Link style={{ textDecoration: 'none', color: 'black' }} to={`/blog/${slug(title).toLowerCase()}`}>
+        <Preview>
+          <Title>{title}</Title>
+          <Date>{date}</Date>
+          <Tags>
+            {
+              tags.map((tag, idx) => <Tag key={idx} type={tag}/>)
+            }
+          </Tags>
+          <Read>read</Read>
+        </Preview>
+      </Link>
     );
   }
 }
