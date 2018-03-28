@@ -1,17 +1,20 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
-import { Code, Article } from '../../../../components';
+import { Code, Article, P, H1, Link, H2 } from '../../../../components';
 
 class BlogEntry extends PureComponent {
   render() {
+    const link = 'https://github.com/jsjaspreet';
     return (
       <Fragment>
         <Helmet>
           <title>JS - Blog</title>
         </Helmet>
         <Article>
-          <h1>Hello World!</h1>
-          <p>This is some paragraph text</p>
+          <H1>Hello World!</H1>
+          <P>This is some paragraph text</P>
+          <H2>Some smaller header</H2>
+          <Link href={link}>{link}</Link>
           <Code/>
         </Article>
       </Fragment>
