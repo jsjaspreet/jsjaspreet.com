@@ -23,7 +23,7 @@ module.exports = {
       'react-stonecutter',
       'react-scroll-up',
       'styled-components',
-      'slug',
+      'slugify',
     ]
   },
 

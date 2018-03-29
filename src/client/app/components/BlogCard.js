@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import slug from 'slug';
+import slugify from 'slugify';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Tag from './BlogTag';
@@ -40,7 +40,7 @@ class BlogCard extends PureComponent {
   render() {
     const { title, tags = [], date } = this.props;
     return (
-      <Link style={{ textDecoration: 'none', color: 'black' }} to={`/blog/${slug(title).toLowerCase()}`}>
+      <Link style={{ textDecoration: 'none', color: 'black' }} to={`/blog/${slugify(title).toLowerCase()}`}>
         <Preview>
           <Title>{title}</Title>
           <Date>{date}</Date>
