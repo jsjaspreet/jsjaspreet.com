@@ -3,9 +3,10 @@ const path = require('path')
 const merge = require('webpack-merge')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CompressionPlugin = require('compression-webpack-plugin')
 const common = require('./webpack.common')
 const projectPaths = require('../projectPaths')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 module.exports = merge(common, {
   devtool: 'none',
@@ -32,9 +33,7 @@ module.exports = merge(common, {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new CompressionPlugin({
-      deleteOriginalAssets: true,
-    }),
+    new BundleAnalyzerPlugin({generateStatsFile: true}),
   ]
 })
 

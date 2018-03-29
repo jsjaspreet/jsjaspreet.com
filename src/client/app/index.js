@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import ScrollUp from 'react-scroll-up';
-import { FaArrowCircleOUp as UpArrow } from 'react-icons/lib/fa';
+import UpArrow from 'react-icons/lib/fa/arrow-circle-o-up';
 import { Switch, Route } from 'react-router-dom';
 import {
   Footer,

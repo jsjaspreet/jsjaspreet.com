@@ -1,10 +1,8 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import {
-  FaInbox as InboxIcon,
-  FaGithub as GithubIcon,
-  FaLinkedinSquare as LinkedInIcon
-} from 'react-icons/lib/fa';
+import InboxIcon from 'react-icons/lib/fa/inbox';
+import GithubIcon from 'react-icons/lib/fa/github';
+import LinkedInIcon from 'react-icons/lib/fa/linkedin-square';
 
 const ContactIcons = styled.div`
   display: flex;

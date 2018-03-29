@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaHeart as Heart } from 'react-icons/lib/fa'
+import Heart from 'react-icons/lib/fa/heart'
 
 const Footer = styled.footer`
   background: rgba(125, 125, 125, 0.1);
