@@ -9,7 +9,7 @@ const projectPaths = require('../projectPaths')
 
 
 module.exports = merge(common, {
-  devtool: 'source-map',
+  devtool: 'none',
   output: {
     publicPath: '/',
     filename: '[name].[chunkhash].[id].js',

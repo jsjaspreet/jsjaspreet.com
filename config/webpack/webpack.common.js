@@ -20,6 +20,9 @@ module.exports = {
       'react-fontawesome',
       'react-hot-loader',
       'react-router-dom',
+      'react-stonecutter',
+      'react-scroll-up',
+      'styled-components',
       'slug',
     ]
   },
