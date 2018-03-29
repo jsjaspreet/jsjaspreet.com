@@ -9,7 +9,8 @@ const LoadingLayout = styled.div`
   justify-content: center;
   padding-bottom: 40px;
   align-items: center;
-  background: dodgerblue;
+  background-color: #f907fc;
+  background-image: linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
 `;
 
 const Rotate = keyframes`

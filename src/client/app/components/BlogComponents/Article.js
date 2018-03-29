@@ -8,7 +8,7 @@ const StyledArticle = styled.article`
   box-sizing: border-box;
   padding: 1.5rem 1.125rem;
   flex-direction: column;
-  background: whitesmoke;
+  background: white;
   flex-grow: 1;
 `;
 

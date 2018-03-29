@@ -13,7 +13,7 @@ const HomeLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: dodgerblue;
+  background: #f907fc linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
 `;
 
 class IndexPage extends PureComponent {

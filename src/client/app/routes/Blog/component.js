@@ -11,7 +11,7 @@ const BlogLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: dodgerblue;
+  background: #f907fc linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
 `;
 
 const TopPad = styled.div`
@@ -62,7 +62,7 @@ class BlogPage extends Component {
         <Helmet>
           <title>JS - Blog</title>
         </Helmet>
-        <BlogLayout>
+        <BlogLayout showGradient={match.isExact}>
           {match.isExact && EntryGrid}
           <Entries/>
         </BlogLayout>

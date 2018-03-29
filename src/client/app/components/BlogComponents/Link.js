@@ -1,19 +1,20 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import P from './P';
 
 const StyledLink = styled.a`
   color: #f92300;
   text-decoration: none;
+  text-rendering: optimizeLegibility;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  word-wrap: break-word;
 `;
 
 class BlogLink extends PureComponent {
   render() {
     return (
       <StyledLink href={this.props.href}>
-        <P>
-          {this.props.children}
-        </P>
+        {this.props.children}
       </StyledLink>
     );
   }

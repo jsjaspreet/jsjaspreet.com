@@ -11,7 +11,7 @@ const ContactLayout = styled.div`
   justify-content: center;
   padding-bottom: 40px;
   align-items: center;
-  background: dodgerblue;
+  background: #f907fc linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
 `;
 
 class ContactPage extends PureComponent {

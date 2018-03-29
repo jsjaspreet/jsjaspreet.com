@@ -10,7 +10,8 @@ const CenteringHeader = styled.header`
   min-height: 55px;
   justify-content: center;
   width: 100%;
-  background: lightsteelblue;
+  background: whitesmoke;
+  border-bottom: 1px solid lightgray;
 `;
 
 const HeaderContent = styled.div`
