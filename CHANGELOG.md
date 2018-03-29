@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.10.0...v1.0.0) (2018-03-29)
+
+
+### Bug Fixes
+
+* **layout:** Fix layout issue, code highlighting, componentize Article ([e99b0e2](https://github.com/jsjaspreet/jsjaspreet.com/commit/e99b0e2))
+
+
+### Features
+
+* **blog:** Add first blog post, more stylistic updates ([4529b7e](https://github.com/jsjaspreet/jsjaspreet.com/commit/4529b7e))
+* **blog:** Add more blog components ([df0d93e](https://github.com/jsjaspreet/jsjaspreet.com/commit/df0d93e))
+* **code:** Add code highlighting, solidify blog component architecture, code split efficiently ([5438f32](https://github.com/jsjaspreet/jsjaspreet.com/commit/5438f32))
+
+
+
 <a name="0.10.0"></a>
 # [0.10.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v0.9.0...v0.10.0) (2018-03-26)
 
