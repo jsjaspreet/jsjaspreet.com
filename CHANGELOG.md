@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.0.1...v1.1.0) (2018-03-29)
+
+
+### Bug Fixes
+
+* **package.json:** Fix analyze command for ensuring a small bundle size ([6015392](https://github.com/jsjaspreet/jsjaspreet.com/commit/6015392))
+
+
+### Features
+
+* **optimize:** Optimize bundle by rereplacing slug with slugify since its footprint is much smaller, put slugify in vendor bundle ([18a69a6](https://github.com/jsjaspreet/jsjaspreet.com/commit/18a69a6))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.0.0...v1.0.1) (2018-03-29)
 
