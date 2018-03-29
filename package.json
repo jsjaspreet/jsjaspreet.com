@@ -18,7 +18,7 @@
     "docker:start": "docker run -dp 8080:80 -t topkekkle:${npm_package_version}",
     "flush": "node ./scripts/flushStaging.js && gulp thumbnails && node ./scripts/generateDB.js",
     "release": "standard-version && git push --follow-tags origin master && npm run deploy",
-    "analyze:bundle": "webpack --config config/webpack/webpack.analyze.js",
+    "analyze": "webpack --config config/webpack/webpack.analyze.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
