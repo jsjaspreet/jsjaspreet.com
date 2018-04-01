@@ -7,7 +7,7 @@ class BlogGrid extends PureComponent {
   render() {
     return (
       <Grid
-        columnWidth={200}
+        columnWidth={208}
         layout={layout.pinterest}
         gutterWidth={10}
         duration={500}

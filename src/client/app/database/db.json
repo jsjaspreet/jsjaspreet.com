@@ -1,7 +1,17 @@
 [
   {
+    "title": "Optimizing Webpack Bundles for Production",
+    "tags": [
+      "code"
+    ],
+    "date": "April 1, 2018"
+  },
+  {
     "title": "3 Lessons From My First Job",
-    "tags": ["career", "personal"],
+    "tags": [
+      "career",
+      "personal"
+    ],
     "date": "June 1, 2016"
   }
 ]
