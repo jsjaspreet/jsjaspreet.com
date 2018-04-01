@@ -8,7 +8,7 @@ class BlogEntries extends PureComponent {
     return (
       <Switch>
         <Route path="/blog/3-lessons-from-my-first-job" component={LessonsFirstJob}/>
-        <Route path="/blog/optimizing-webpack-bundles-for-production" component={OptimizingWebpackBundles}/>
+        <Route path="/blog/optimizing-webpack-bundles-for-production-react-apps" component={OptimizingWebpackBundles}/>
       </Switch>
     );
   }
