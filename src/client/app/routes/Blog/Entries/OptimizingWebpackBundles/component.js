@@ -1,51 +1,117 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
-import { Article, P, H1, Link, H2 } from '../../../../components';
+import { Article, P, H1, Link, H2, Code, CodeSnippet, Image } from '../../../../components';
+import slugImage from './blogImages/slug-size.png';
+import slugifyImage from './blogImages/slugify-size.png';
 
 class BlogEntry extends PureComponent {
   render() {
     return (
       <Fragment>
         <Helmet>
-          <title>JS - Blog</title>
+          <title>JS - Blog - Optimizing Webpack Bundles for Production React Apps</title>
         </Helmet>
         <Article>
-          <H1>3 Lessons from my First Job</H1>
-          <P>My first full-time job was working as a Software Engineer at YP and I'd like to share three lessons that
-            stood out the most during my time there. From starting out as a clueless intern who had trouble getting
-            Tomcat set up in Eclipse to being a strong contributor on my team, I developed quickly and saw lessons from
-            books like Mythical Man Month lived out in a real development environment.</P>
-          <H2>Push for coding-heavy assignments</H2>
+          <H1>Optimizing Webpack Bundles for Production React Apps</H1>
           <P>
-            Live the <Link href="https://blog.codinghorror.com/quantity-always-trumps-quality">Quantity Over Quality
-            Coding Horror blog post</Link>. I learned the most from taking on heavy coding assignments that required me
-            to learn new technology and write a lot of code, or read a lot of legacy code from older yet critical
-            projects other team members wouldn’t want to touch with a ten-foot pole. I’m sure you have some legacy
-            project floating around at your workplace with a similar story--be the person to accept the responsibility
-            of maintaining that monster. Not only will others thank you for accepting responsibility over something
-            important where maybe the previous maintainer left the company, but you’ll also learn a lot from studying
-            the design of others and thinking about how to improve upon it. Even better if it involves technology you’re
-            unfamiliar with, you’ll leave with not only a better understanding of system design as a whole but maybe
-            even learn a new programming language/paradigm. I believe this was the most important factor in my growth.
-            Writing a lot of code in the beginning is to kick start your 10,000 hour journey and start developing your
-            heuristics about what good software looks like.
+            In building this site, I wanted to practice techniques for limiting bloat and unnecessary network requests
+            that inevitably creep into most front end projects that don't put perf first.
+            Here are three techniques outside of the obvious basic gzip + CDN Caching that you may find helpful in
+            making your site more efficient.
           </P>
-          <H2>Invest in testable design</H2>
-          <P>Write your code in a QA-friendly way, for example by modularizing your code into separate ideally stateless
-            functions. This will go a long way in easing refactoring time later on and being adaptable to changing
-            product requirements. The confidence of being able to make code changes and validate them through a thorough
-            test-suite is the secret sauce to rapid iteration. Thinking about test cases will also help other developers
-            pick up on your projects if you ever have to leave the company, as they can make changes confidently by
-            understanding the test cases you’ve written.</P>
-          <H2>Dream wildly with your 20% Time</H2>
-          <P>While I was hired for primarily a backend role at YP, I was able to expand my breadth of knowledge greatly
-            by taking on side projects outside my expected expertise. My favorite side project was overhauling our
-            deployment process which previously consisted of dropping WAR files into special production VMs, to an
-            automated process that utilized Docker and Mesos for containerized deployments. This unified our deployment
-            process across multiple applications, made both dev and QA teams more confident in their releases, and I
-            also learned a ton along the way. Even if you don’t work on side projects outside your primary role, just
-            tinkering with new technologies that all the cool folks at HN talk about and seeing whether they might be
-            useful for what you do is a great way to keep up to date with our rapidly evolving field.</P>
+          <H2>
+            Code Split with React Router v4 and React Loadable
+          </H2>
+          <P>
+            There's already a great <Link
+            href="https://github.com/jamiebuilds/react-loadable#------------guide">guide</Link> on the
+            <CodeSnippet>react-loadable</CodeSnippet> github page, but the basic idea is that you can split up your
+            website into different
+            bundles based on routes. This is really important for homepages for example where you may have just a simple
+            splash page, but your site is downloading tons of unnecessary javascript that may not be needed at all if
+            for example a user doesn't login. Image from the github showing this difference in bundling:
+          </P>
+
+          <Image
+            src="https://camo.githubusercontent.com/129f34bba8ba80f8a4a1a037619b5f7076906e06/687474703a2f2f7468656a616d65736b796c652e636f6d2f696d672f72656163742d6c6f616461626c652d73706c69742d62756e646c65732e706e67"/>
+          <P>
+            Beyond route level code splitting, sometimes it also makes sense to split out some data specific bundle
+            that you'd like
+            to live separately from your visual library code, for caching purposes for example. Whenever I deploy a
+            new blog post for example,
+            it doesn't make sense to bust the cache for the entire <CodeSnippet>/blog</CodeSnippet> route, wouldn't it
+            make more sense to just
+            bust a data specific cache that contains a list of all possible blog entries?
+            That's exactly what I do, here's the code below that takes advantage of the dynamic import syntax to
+            import a DAO for my blog posts:
+          </P>
+          <Code code={`
+async componentDidMount() {
+  const db = await import(/* webpackChunkName: "db" */ '../../database/dao.js');
+  this.setState({ db: db.default });
+}`}/>
+          <H2>Understand the cost of dependencies</H2>
+          <P>
+            Without understanding the weight of your production dependencies,
+            you're bound to ship megabytes over the wire for some functionality
+            that could fit in kilobytes instead. You should ideally include some sort of automated process for every PR
+            that if there is a package.json change, show what the effects are on the production build bundles.
+          </P>
+          <P>
+            One easy way of doing this is through <Link href="https://www.npmjs.com/package/webpack-bundle-analyzer">Webpack
+            Bundle Analyzer</Link>
+          </P>
+          <P>
+            Real world use case: I needed a way to create URL safe routes for this site for my blog posts based on their
+            titles, and typically the way I've seen
+            this done is through some slug process, so I first decided to use
+            the <CodeSnippet>slug</CodeSnippet> package for this feature. When
+            I went to build my site however, I was shocked at how much extra weight was
+            tacked on by what I assumed was a simple library. I ended up using Webpack Bundle Analyzer to first detect
+            this issue, and then swapped it out
+            for a slimmer library <CodeSnippet>slugify</CodeSnippet> that fit my simple purposes. Visuals from Webpack
+            Bundle Analyzer below:
+          </P>
+
+          <P>
+            With <CodeSnippet>slug</CodeSnippet>, the vendor bundle gzip size is 137.92 KB and visually dwarfs the rest
+            of the bundles:
+          </P>
+
+          <Image src={slugImage}/>
+
+          <P>
+            With <CodeSnippet>slugify</CodeSnippet>, the vendor bundle gzip size is 88.86 KB, massive improvement:
+          </P>
+
+          <Image src={slugifyImage}/>
+
+          <H2>Optimize your imports</H2>
+          <P>
+            While many libraries are adopting the
+            new <CodeSnippet>sideEffects</CodeSnippet> <Link
+            href="https://github.com/webpack/webpack/tree/master/examples/side-effects">webpack 4
+            standard</Link> to save you the trouble, you can bullet proof yourself by importing functionality from a
+            library from where the code
+            lives directly rather than from a top level index file.
+          </P>
+          <P>
+            Real world use case: This site uses a couple icons from the <CodeSnippet>react-icons</CodeSnippet> library.
+            Instead of importing the
+            entire library for the 2-3 icons I use,
+            it's much better to import the components directly as shown below:
+          </P>
+          <Code code={`
+import InboxIcon from 'react-icons/lib/fa/inbox';
+import GithubIcon from 'react-icons/lib/fa/github';
+import LinkedInIcon from 'react-icons/lib/fa/linkedin-square';
+`}/>
+
+          <H2>Conclusion</H2>
+          <P>
+            I hope these techniques help you slim down your production bundles!
+            If you have any other techniques you use, feel free to reach out and let me know!
+          </P>
         </Article>
       </Fragment>
     );
