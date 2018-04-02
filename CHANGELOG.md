@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.1.0...v1.2.0) (2018-04-02)
+
+
+### Features
+
+* **blog:** WIP for optimizing webpack bundles blog post, fix blog layout ([5a8e19f](https://github.com/jsjaspreet/jsjaspreet.com/commit/5a8e19f))
+* **blog:** Write blogpost on optimizing webpack bundles ([a36ba00](https://github.com/jsjaspreet/jsjaspreet.com/commit/a36ba00))
+* **components:** Add more blog components, complete writing blogpost in react form ([9a33bf2](https://github.com/jsjaspreet/jsjaspreet.com/commit/9a33bf2))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.0.1...v1.1.0) (2018-03-29)
 
