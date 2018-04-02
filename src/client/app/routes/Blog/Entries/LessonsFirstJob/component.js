@@ -7,7 +7,7 @@ class BlogEntry extends PureComponent {
     return (
       <Fragment>
         <Helmet>
-          <title>JS - Blog</title>
+          <title>JS - Blog - 3 Lessons FRom My First Job</title>
         </Helmet>
         <Article>
           <H1>3 Lessons from my First Job</H1>
