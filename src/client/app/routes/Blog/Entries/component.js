@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import LessonsFirstJob from './LessonsFirstJob';
 import OptimizingWebpackBundles from './OptimizingWebpackBundles';
+import ReflectionsOnCal from './ReflectionsOnCal';
 
 class BlogEntries extends PureComponent {
   render() {
@@ -9,6 +10,7 @@ class BlogEntries extends PureComponent {
       <Switch>
         <Route path="/blog/3-lessons-from-my-first-job" component={LessonsFirstJob}/>
         <Route path="/blog/optimizing-webpack-bundles-for-production-react-apps" component={OptimizingWebpackBundles}/>
+        <Route path="/blog/reflections-on-cal" component={ReflectionsOnCal}/>
       </Switch>
     );
   }
