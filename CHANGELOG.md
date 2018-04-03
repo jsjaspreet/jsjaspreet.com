@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.2.0...v1.3.0) (2018-04-03)
+
+
+### Bug Fixes
+
+* **blog:** Fix html title for blog entry ([072eef0](https://github.com/jsjaspreet/jsjaspreet.com/commit/072eef0))
+* **blog:** Polish up the writing for webpack bundle blog post ([4ff0391](https://github.com/jsjaspreet/jsjaspreet.com/commit/4ff0391))
+
+
+### Features
+
+* **blog:** Add reflections on cal ([87a1778](https://github.com/jsjaspreet/jsjaspreet.com/commit/87a1778))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.1.0...v1.2.0) (2018-04-02)
 
