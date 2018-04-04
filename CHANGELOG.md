@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.3.0...v1.4.0) (2018-04-04)
+
+
+### Features
+
+* **blog:** Add 2016 in review, fix blog grid bug ([0e20180](https://github.com/jsjaspreet/jsjaspreet.com/commit/0e20180))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.2.0...v1.3.0) (2018-04-03)
 
