@@ -19,9 +19,10 @@ class BlogEntry extends PureComponent {
             So you may have heard of how <Link href="http://graphql.org">GraphQL</Link> has made REST APIs <Link
             href="https://medium.freecodecamp.org/rest-apis-are-rest-in-peace-apis-long-live-graphql-d412e559d8e4">REST-in-peace
             APIs</Link>,
-            and even started using GraphQL for some of your projects. I've had the pleasure of working with GraphQL at
-            my past three jobs and have picked up
-            quite a few practical tips that can help you transition away from REST APIs toward GraphQL. For the purposes
+            and even started using GraphQL for some of your projects. I've had the pleasure of working with GraphQL
+            professionally for
+            the past two years and have picked up
+            a few practical tips that can help you transition away from REST APIs toward GraphQL. For the purposes
             of this guide, I'm going to
             assume you're using <Link href="https://www.apollographql.com">Apollo's GraphQL ecosystem</Link>, though the
             general ideas are applicable regardless of which GraphQL flavor you're using.
@@ -42,7 +43,7 @@ class BlogEntry extends PureComponent {
           <Code code={`
 // mockSchema.js
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
-import typeDefs from './typeDefs'
+import typeDefs from './typeDefs';
 
 // Create a schema with no resolvers
 const schema = makeExecutableSchema({
@@ -72,16 +73,20 @@ export default schema;
             This technique has been essential for front end development&mdash;quickly seeing how my
             components behave on my client side apps without needing to spin up actual backend servers has greatly cut
             down iteration time.
-            Mocking is also really useful for testing. In general, having your server able to
-            output real data without needing a backing resolver / db is the kind of decoupling that makes for
-            developer-happy architectures.
+            Mocking is also really useful for integration testing when you want to make sure your API is responding
+            appropriately in the context of a larger test.
+          </P>
+
+          <P>
+            In general, having your server output real data without needing a backing resolver / db is the kind of
+            decoupling that makes for developer-happy architectures.
           </P>
 
           <H2> Automate Your Documentation</H2>
 
           <P>
-            Wouldn't it be nice if we could just get automated easy-to-share documentation for all our backend API's?
-            GraphQL makes this easy.
+            With a little Continuous Integration magic and some awesome library support, GraphQL makes implementing
+            up-to-date easy-to-share API documentation a breeze.
           </P>
 
           <Image src={graphiqlImage}/>
@@ -114,7 +119,7 @@ export default schema;
           <Image src={graphdocImage}/>
 
           <P>
-            Here's a <Link href="https://gist.github.com/jsjaspreet/9cbe9b8dd629c0d1b8c05ddd00b80c63">github
+            Here's also a <Link href="https://gist.github.com/jsjaspreet/9cbe9b8dd629c0d1b8c05ddd00b80c63">github
             gist</Link> showing how you
             can integrate this workflow in your project.
           </P>
@@ -134,10 +139,10 @@ export default schema;
 
           <P>
             While GraphQL's flexibility makes development a breeze by allowing you to query for exactly the data you
-            needed for your client app,
+            need for your client app,
             an unprotected public GraphQL endpoint is susceptible to
             easy DDoS attacks through both recursive deep queries (imagine a parent child relationship in your GraphQL
-            schema which recurses <CodeSnippet>{"parent { child { parent ... } }"}</CodeSnippet>
+            schema which recurses <CodeSnippet>{'parent { child { parent ... } }'}</CodeSnippet>
             with a naive resolver implementation) or wide queries which request every top level field. A single such
             client request can trigger hundreds of underlying backend requests if you do not lock down access patterns
             or have another way of detecting improper access (perhaps by limiting depth of subfields, limiting total
@@ -149,7 +154,7 @@ export default schema;
             href="https://github.com/apollographql/apollo-server#whitelisting">whitelisting
             operations</Link> for your public facing GraphQL API.
             This Apollo feature allows you to declare in advanced what queries/mutation are acceptably resolved by your
-            GraphQL Server, while rejecting all other arbitrary queries. For client side apps, this does mean
+            GraphQL Server, while rejecting all other arbitrary operations. For client side apps, this does mean
             figuring out what queries/mutations you'll need in advanced, but there are libraries such as <Link
             href="https://github.com/apollographql/persistgraphql">PersistGraphQL</Link> that can help you extract your
             queries from your client-side apps automatically.
@@ -179,7 +184,7 @@ export default schema;
             For me personally, the thing that astounds me about GraphQL isn't just the awesome technical solutions it
             enables, but also the organizational impact of a more decoupled environment where teams can develop
             independently of one another and focus more on upholding public contracts rather than knowing too much about
-            each others' internal implementations.
+            internal implementations.
           </P>
 
           <P>
