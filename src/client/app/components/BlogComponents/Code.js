@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const StyledCode = styled.code`
   line-height: 1.42;
   border-radius: 3px;
+  margin-bottom: 1.2em;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   font-family: 'Source Code Pro', monospace;

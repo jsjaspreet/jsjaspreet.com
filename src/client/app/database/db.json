@@ -1,5 +1,12 @@
 [
   {
+    "title": "GraphQL Best Practices",
+    "tags": [
+      "code"
+    ],
+    "date": "April 8, 2018"
+  },
+  {
     "title": "Optimizing Webpack Bundles for Production React Apps",
     "tags": [
       "code"
