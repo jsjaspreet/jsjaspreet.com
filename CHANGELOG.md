@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.4.0...v1.5.0) (2018-04-10)
+
+
+### Features
+
+* **blog:** Add blog images for graphql post ([d658371](https://github.com/jsjaspreet/jsjaspreet.com/commit/d658371))
+* **blog:** Complete GraphQL Blog Post ([cf55aa0](https://github.com/jsjaspreet/jsjaspreet.com/commit/cf55aa0))
+* **blog:** GraphQL rough draft 1 ([3246b60](https://github.com/jsjaspreet/jsjaspreet.com/commit/3246b60))
+* **blog:** Tighten up the post ([1c8c784](https://github.com/jsjaspreet/jsjaspreet.com/commit/1c8c784))
+
+
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.3.0...v1.4.0) (2018-04-04)
 
