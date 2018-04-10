@@ -21,13 +21,21 @@ const MainDiv = styled.div`
   height: 100%;
 `;
 
+const ClassedUpArrow = ({ className }) => <UpArrow className={className} size={40}/>;
+const StyledArrow = styled(ClassedUpArrow)`
+  color: aliceblue;
+  @media (max-width: 830px) {
+    color: rgba(200,200,200,0.7);
+  } 
+`
+
 class App extends Component {
   render() {
     return (
       <MainDiv>
         <Header/>
         <ScrollUp showUnder={160}>
-          <UpArrow style={{ color: 'aliceblue' }} size={40}/>
+          <StyledArrow/>
         </ScrollUp>
         <Switch>
           <Route path="/" exact component={Home}/>
