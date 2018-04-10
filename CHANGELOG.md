@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.5.0...v1.6.0) (2018-04-10)
+
+
+### Features
+
+* **up-arrow:** Fix up arrow on mobile screens ([a2490a7](https://github.com/jsjaspreet/jsjaspreet.com/commit/a2490a7))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.4.0...v1.5.0) (2018-04-10)
 
