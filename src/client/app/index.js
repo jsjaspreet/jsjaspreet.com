@@ -11,7 +11,7 @@ import {
   Home,
   Contact,
   Blog,
-  BlogEntry,
+  NotFound
 } from './routes';
 
 const MainDiv = styled.div`
@@ -27,7 +27,7 @@ const StyledArrow = styled(ClassedUpArrow)`
   @media (max-width: 830px) {
     color: rgba(200,200,200,0.7);
   } 
-`
+`;
 
 class App extends Component {
   render() {
@@ -41,6 +41,7 @@ class App extends Component {
           <Route path="/" exact component={Home}/>
           <Route path="/blog" component={Blog}/>
           <Route path="/contact" exact component={Contact}/>
+          <Route component={NotFound}/>
         </Switch>
         <Footer/>
       </MainDiv>

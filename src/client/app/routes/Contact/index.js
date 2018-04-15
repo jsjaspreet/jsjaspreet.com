@@ -1,16 +1,32 @@
-import React, { Component } from 'react'
-import Loadable from 'react-loadable'
-import { Loading } from '../../components'
+import React, { PureComponent, Fragment } from 'react';
+import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
+import { ContactLinks } from '../../components';
 
-const LoadableComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "contact" */ './component'),
-  loading: Loading,
-})
+const ContactLayout = styled.div`
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 40px;
+  align-items: center;
+  background: #f907fc linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
+`;
 
-class Route extends Component {
+class ContactPage extends PureComponent {
   render() {
-    return <LoadableComponent {...this.props} />
+    return (
+      <Fragment>
+        <Helmet>
+          <title>JS - Contact</title>
+        </Helmet>
+        <ContactLayout>
+          <ContactLinks/>
+        </ContactLayout>
+      </Fragment>
+    );
   }
 }
 
-export default Route
+export default ContactPage;

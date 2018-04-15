@@ -1,17 +1,16 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { ContactLinks } from '../../components';
+import NotFoundImage from './404.gif';
 
-const ContactLayout = styled.div`
+const MainLayout = styled.div`
   width: 100%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-bottom: 40px;
   align-items: center;
-  background: #f907fc linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
+  background: black;
 `;
 
 class ContactPage extends PureComponent {
@@ -19,11 +18,11 @@ class ContactPage extends PureComponent {
     return (
       <Fragment>
         <Helmet>
-          <title>JS - Contact</title>
+          <title>JS</title>
         </Helmet>
-        <ContactLayout>
-          <ContactLinks/>
-        </ContactLayout>
+        <MainLayout>
+          <img style={{ width: 500, maxWidth: '100%', height: 500 }} src={NotFoundImage}/>
+        </MainLayout>
       </Fragment>
     );
   }
