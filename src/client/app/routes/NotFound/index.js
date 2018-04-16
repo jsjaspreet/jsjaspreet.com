@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import NotFoundImage from './404.gif';
+import NotFoundImage from './NotFound.gif';
 
 const MainLayout = styled.div`
   width: 100%;
