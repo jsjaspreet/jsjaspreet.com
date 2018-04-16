@@ -14,6 +14,7 @@ module.exports = {
     ],
     vendor: [
       'react',
+      'react-ga',
       'react-dom',
       'react-loadable',
       'react-helmet',

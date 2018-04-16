@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import { Article, P, H1, Link, H2, Code, CodeSnippet, Image } from '../../../../components';
 import graphdocImage from './blogImages/graphdoc.png';
@@ -6,6 +7,10 @@ import graphiqlImage from './blogImages/graphiql.png';
 import graphqlLogoImage from './blogImages/graphql-logo.png';
 
 class BlogEntry extends PureComponent {
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   render() {
     return (
       <Fragment>

@@ -1,8 +1,13 @@
 import React, { PureComponent, Fragment } from 'react';
+import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import { Article, P, H1, H2 } from '../../../../components';
 
 class BlogEntry extends PureComponent {
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   render() {
     return (
       <Fragment>

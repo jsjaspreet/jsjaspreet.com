@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
@@ -23,6 +24,13 @@ class BlogPage extends Component {
     super(props);
     this.state = { db: null, currentPageNumber: 0 };
   }
+
+  static getDerivedStateFromProps() {
+    if (window.location.pathname === '/blog') {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  }
+
 
   async componentDidMount() {
     const db = await import(/* webpackChunkName: "db" */ '../../database/dao.js');

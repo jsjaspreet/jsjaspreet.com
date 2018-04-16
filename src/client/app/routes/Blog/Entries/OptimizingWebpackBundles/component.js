@@ -1,10 +1,15 @@
 import React, { PureComponent, Fragment } from 'react';
+import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import { Article, P, H1, Link, H2, Code, CodeSnippet, Image } from '../../../../components';
 import slugImage from './blogImages/slug-size.png';
 import slugifyImage from './blogImages/slugify-size.png';
 
 class BlogEntry extends PureComponent {
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   render() {
     return (
       <Fragment>
@@ -42,7 +47,8 @@ class BlogEntry extends PureComponent {
             that you'd like to live separately from the rest of your bundles. Whenever I deploy a
             new blog post for example, it doesn't make sense to bust the cache for the
             entire <CodeSnippet>/blog</CodeSnippet> route, wouldn't it
-            make more sense to only cache bust a data specific "db" bundle that contains a list of all possible blog entries?
+            make more sense to only cache bust a data specific "db" bundle that contains a list of all possible blog
+            entries?
             Here's a code example below from this site that takes advantage of dynamic import syntax to
             implement this data-specific chunk feature for my blog posts:
           </P>

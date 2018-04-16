@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import styled from 'styled-components';
 import ScrollUp from 'react-scroll-up';
 import UpArrow from 'react-icons/lib/fa/arrow-circle-o-up';
@@ -13,6 +14,8 @@ import {
   Blog,
   NotFound
 } from './routes';
+
+ReactGA.initialize('UA-117595740-1');
 
 const MainDiv = styled.div`
   display: flex;

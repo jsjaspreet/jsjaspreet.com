@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import ReactGA from 'react-ga';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import {
@@ -17,6 +18,10 @@ const HomeLayout = styled.div`
 `;
 
 class IndexPage extends PureComponent {
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   render() {
     return (
       <Fragment>

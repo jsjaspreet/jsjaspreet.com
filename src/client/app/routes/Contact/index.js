@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import ReactGA from 'react-ga'
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { ContactLinks } from '../../components';
@@ -15,6 +16,10 @@ const ContactLayout = styled.div`
 `;
 
 class ContactPage extends PureComponent {
+  componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+
   render() {
     return (
       <Fragment>
