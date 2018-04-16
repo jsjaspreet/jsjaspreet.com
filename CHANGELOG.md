@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.6.0...v1.7.0) (2018-04-16)
+
+
+### Bug Fixes
+
+* **import:** Fix import name ([7593a99](https://github.com/jsjaspreet/jsjaspreet.com/commit/7593a99))
+
+
+### Features
+
+* **404:** Add 404, compact contact page to main bundle ([e1e902c](https://github.com/jsjaspreet/jsjaspreet.com/commit/e1e902c))
+* **analytics:** Add google analytics, upgrade dependencies where possible ([8cde0b9](https://github.com/jsjaspreet/jsjaspreet.com/commit/8cde0b9))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.5.0...v1.6.0) (2018-04-10)
 
