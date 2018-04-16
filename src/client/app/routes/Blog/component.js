@@ -25,12 +25,11 @@ class BlogPage extends Component {
     this.state = { db: null, currentPageNumber: 0 };
   }
 
-  static getDerivedStateFromProps() {
+  componentDidUpdate() {
     if (window.location.pathname === '/blog') {
       ReactGA.pageview(window.location.pathname + window.location.search);
     }
   }
-
 
   async componentDidMount() {
     const db = await import(/* webpackChunkName: "db" */ '../../database/dao.js');

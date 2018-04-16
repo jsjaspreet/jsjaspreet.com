@@ -17,6 +17,10 @@ mkdir images/jpg
 mv dist/*.jpg images/jpg
 jpegoptim --size=100 images/jpg/*
 
+# gif
+mkdir images/gif
+mv dist/*.gif images/gif
+
 # remove old files
 aws s3 rm --recursive s3://jsjaspreet.com
 
@@ -28,3 +32,6 @@ aws s3 cp --recursive images/jpg s3://jsjaspreet.com
 
 # upload png
 aws s3 cp --recursive images/png s3://jsjaspreet.com
+
+# upload gif
+aws s3 cp --recursive images/gif s3://jsjaspreet.com
