@@ -31,7 +31,8 @@ class BlogEntry extends PureComponent {
               textDecoration: 'none',
               textRendering: 'optimizeLegibility'
             }} to="/blog/3-lessons-from-my-first-job">lessons
-              post</Link> I wrote after my first job at YP. If you're
+              post</Link> I wrote after my first job at YP.</P>
+          <P>If you're
             just starting out in your career, I hope these thoughts help you with some of the ambiguity and imposter
             syndrome you may be experiencing and if you're a decades-of-experience expert thinking this post is about to
             be full of shit, I'd love to know your thoughts on what mattered most in your career. Here's the unfiltered
@@ -41,13 +42,14 @@ class BlogEntry extends PureComponent {
           <H2>Team Skills > Individual Talent</H2>
 
           <P>
-            It's easy after being assessed on your tests and projects individually through all of college to develop
-            a lone wolf mindset. Even on team projects, your group disbanded after a semester/quarter and so if you had
+            It's easy after being assessed primarily individually throughout all of college to develop
+            a lone wolf mindset. Even with team project assignments, your group disbanded after a semester and so if you
+            had
             any sort of conflict, you could wait out until the end of the project and learn nothing about handling those
-            situations. As for the work itself, industry problems don't come with a textbook you can go through alone to
-            get
+            situations. And as for the work itself, as opposed to homework, industry problems don't come with a textbook
+            you can go through alone to get
             better&mdash;oftentimes you'll find yourself working on a problem no one has written about before and so
-            Stackoverflow won't help you there.
+            even Stackoverflow won't help you there.
           </P>
 
           <P>
@@ -56,10 +58,10 @@ class BlogEntry extends PureComponent {
 
           <P>You can do this by catching your impulse to start banging out solutions immediately on your assignments.
             Instead of thinking
-            about how you could quickly solve a problem alone in your own optimized way, ask yourself how others around
-            you may approach the same problem, and who else you need to talk to to ensure you're delivering the best
-            solution for the group as a whole. And after you've done that, go one step further and think about how the
-            work you're then going to do will affect the next person's ability to ask these same questions when they
+            about how you could quickly solve a problem alone in your own optimized way, gather greater context and ask
+            yourself how others around you would approach the same problem.
+            And after you've done that, go one step further and think about how the
+            work you're then going to do will affect the next person's ability to ask that same question when they
             build on your effort.
           </P>
 
@@ -72,7 +74,8 @@ class BlogEntry extends PureComponent {
           <P>
             Beyond communicating with those around you currently, also consider who might come after you to work on
             something you wrote months ago. How do you prevent that person from tearing their hair out from reading your
-            code? Documentation! Everything clear and in context now will not be the same a year from now, so write that
+            code? Documentation! Everything so "obvious" in context now will not be the same a year from now, so write
+            that
             documentation for posterity's sake.
           </P>
 
@@ -93,22 +96,24 @@ class BlogEntry extends PureComponent {
           <H2>Keep Challenging Yourself</H2>
 
           <P>
-            While practicing all those people skills by following my advice from the previous section, you also need to
+            While practicing all those people skills from the previous section, you also need to
             remember to stay sharp individually. There's no professor or four year curriculum to guide you through
-            changes to expect in the coming years, and so you will have to become your own guide in adapting to a fast
+            changes to expect in the coming years, so you will have to become your own guide in adapting to a fast
             paced industry.
           </P>
 
           <P>
             Personally, this is what has kept software engineering exciting for me. I originally started writing Java
-            code for servlets in a massive data pipeline connected by Kafka, but later switched to crafting UX
-            experiences in React as I saw Javascript take the software industry by storm. And after a ton of React work,
-            I'm now working on scaling a backend receiving thousands of requests a second!
+            code for servlets in a massive data pipeline connected by Kafka, but later switched to crafting amazing UX
+            in React as I saw Javascript take the software industry by storm. And after a ton of React work,
+            I'm now using GraphQL and Google Cloud Spanner to scale a backend receiving thousands of requests
+            a second!
           </P>
 
           <P>
             Beyond pushing to work on a variety of interesting problems, I've continued challenging myself by completing
-            online training classes, pushing myself to practice stricter engineering discipline by maintaining 100% code
+            online education courses, pushing myself to practice stricter engineering discipline by maintaining 100%
+            code
             coverage, giving internal engineering talks on best practices, and attending meetups to learn how others are
             approaching their technical problems. The last part is especially important, as the longer you work with the
             same group, the larger the possibility that group herd mentality kicks in. Maintaining diversity of thought
@@ -118,12 +123,12 @@ class BlogEntry extends PureComponent {
             So don't get complacent with the work you're doing, continue learning outside of work or also consider
             moving to different projects / companies to get broader experiences early on. The lessons you gain will make
             you a stronger, more well rounded engineer and clue you into the kind of work that you may be happy to
-            specialize on to eventually become a domain expert. As much as it may seem blissful to continue working with
+            specialize in. As much as it's blissful to continue working with
             the team or codebase you've grown comfortable with, your biggest growth spurts will come from those moments
             when you switch it up to learn something new or aspire to the next level of what you already know.
           </P>
 
-          <H2>The Dark Side: Balance your Life</H2>
+          <H2>The Dark Side: Life Balance</H2>
 
           <P>
             So I've just laid out a lot of extra work beyond the easy option of clocking in from 9-5 and doing just
@@ -134,8 +139,7 @@ class BlogEntry extends PureComponent {
             On a physical level, that office job isn't going to be anything like traversing those hills every day
             getting to class, and so you'll have to manage your day to provide enough time for physical exercise. Use
             this need to organize a sports league at your company! Personally, I built out a home gym in my garage at
-            home
-            and doing those reps has been crucial in not devolving into an inflexible slab of wood.
+            home and doing those reps has been crucial in not devolving into an inflexible slab of wood.
           </P>
 
           <P>
