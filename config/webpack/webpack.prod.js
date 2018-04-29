@@ -11,8 +11,8 @@ module.exports = merge(common, {
   devtool: 'none',
   output: {
     publicPath: '/',
-    filename: '[name].[chunkhash].[id].js',
-    chunkFilename: '[name].[chunkhash].[id].js',
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js',
     path: projectPaths.distDir
   },
   plugins: [
