@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.7.1...v1.8.0) (2018-04-29)
+
+
+### Features
+
+* **blog:** Write third year lessons post ([d7be168](https://github.com/jsjaspreet/jsjaspreet.com/commit/d7be168))
+
+
+
 <a name="1.7.1"></a>
 ## [1.7.1](https://github.com/jsjaspreet/jsjaspreet.com/compare/v1.7.0...v1.7.1) (2018-04-16)
 
