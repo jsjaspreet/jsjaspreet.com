@@ -4,6 +4,7 @@ import LessonsFirstJob from './LessonsFirstJob';
 import OptimizingWebpackBundles from './OptimizingWebpackBundles';
 import ReflectionsOnCal from './ReflectionsOnCal';
 import GraphQLBestPractices from './GraphQLBestPractices';
+import ThirdYearLessons from './ThirdYearLessons';
 import Review2016 from './Review2016';
 
 class BlogEntries extends PureComponent {
@@ -15,6 +16,7 @@ class BlogEntries extends PureComponent {
         <Route path="/blog/reflections-on-cal" component={ReflectionsOnCal}/>
         <Route path="/blog/2016-in-review" component={Review2016}/>
         <Route path="/blog/graphql-best-practices" component={GraphQLBestPractices}/>
+        <Route path="/blog/year-3:-lessons-learned-in-engineering" component={ThirdYearLessons}/>
       </Switch>
     );
   }
