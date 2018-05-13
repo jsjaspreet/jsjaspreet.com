@@ -49,7 +49,7 @@ class BlogEntry extends PureComponent {
             situations. And as for the work itself, as opposed to homework, industry problems don't come with a textbook
             you can go through alone to get
             better&mdash;oftentimes you'll find yourself working on a problem no one has written about before and so
-            even Stackoverflow won't help you there.
+            even Stack Overflow won't help you there.
           </P>
 
           <P>
@@ -80,7 +80,7 @@ class BlogEntry extends PureComponent {
           </P>
 
           <P>
-            This communication is what will prevent unncecessary or wrong work being done, teach you about who the
+            This communication is what will prevent unnecessary or wrong work being done, teach you about who the
             experts are at your company for specific domains, and also help other people know about your work so if they
             have questions related to your domain, they will know who to talk to.
           </P>
